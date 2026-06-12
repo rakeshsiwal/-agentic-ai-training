@@ -1,0 +1,16 @@
+# Core LangGraph + LangChain
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# LLM providers — install whichever you use (at least one required)
+langchain-openai>=0.2.0        # OpenAI GPT-4o / GPT-4o-mini
+langchain-anthropic>=0.2.0     # Anthropic Claude
+langchain-google-genai>=2.0.0  # Google Gemini
+langchain-groq>=0.2.0          # Groq (free tier — llama-3.1-70b)
+
+# Tools
+duckduckgo-search>=6.0.0       # Live web search
+
+# Utilities
+python-dotenv>=1.0.0           # Load .env files
