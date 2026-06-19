@@ -1,0 +1,20 @@
+# ── Core LangGraph / LangChain ────────────────────────────────────────────────
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# ── LLM providers (at least one API key required) ─────────────────────────────
+langchain-anthropic>=0.2.0       # ANTHROPIC_API_KEY
+langchain-openai>=0.2.0          # OPENAI_API_KEY
+langchain-google-genai>=2.0.0    # GOOGLE_API_KEY
+langchain-groq>=0.2.0            # GROQ_API_KEY
+
+# ── RAG ───────────────────────────────────────────────────────────────────────
+langchain-chroma>=0.1.0          # ChromaDB LangChain integration
+chromadb>=0.5.0                   # Vector store
+langchain-community>=0.3.0        # HuggingFaceEmbeddings
+sentence-transformers>=3.0.0      # Local embedding model (no API key)
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+pydantic>=2.0.0

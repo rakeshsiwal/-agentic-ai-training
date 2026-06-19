@@ -1,0 +1,5 @@
+Transformer Architecture
+
+Transformers are a type of neural network architecture introduced in the paper "Attention Is All You Need". They use self-attention mechanisms to process input sequences and capture relationships between words. Unlike RNNs, transformers can process all tokens in parallel, making training much faster.
+
+Transformers are the foundation of modern large language models such as GPT, Claude, and Gemini. They consist of encoder and decoder blocks, attention layers, feed-forward networks, and positional encodings. Their ability to understand long-range dependencies has made them highly successful in natural language processing tasks.
