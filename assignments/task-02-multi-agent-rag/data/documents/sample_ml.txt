@@ -1,0 +1,5 @@
+Reinforcement Learning from Human Feedback (RLHF)
+
+RLHF is a technique used to align AI systems with human preferences. The process typically involves collecting human feedback on model outputs, training a reward model on that feedback, and then optimizing the language model using reinforcement learning.
+
+RLHF helps reduce harmful responses and improves the usefulness of AI assistants. It is widely used in modern conversational AI systems. Human evaluators compare multiple responses, and the reward model learns which outputs humans prefer. This feedback is then used to guide the model toward better behavior.
