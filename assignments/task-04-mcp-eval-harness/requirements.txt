@@ -1,0 +1,30 @@
+# Core LangChain / LangGraph
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# LLM providers (at least one API key required — see .env.example)
+langchain-anthropic>=0.2.0
+langchain-openai>=0.2.0
+langchain-google-genai>=2.0.0
+langchain-groq>=0.2.0
+
+# MCP
+mcp>=1.2.0
+langchain-mcp-adapters>=0.1.0
+
+# External MCP server (second server — pure Python, no Node required)
+mcp-server-time>=0.1.0
+
+# RAG / vector store
+langchain-chroma>=0.1.0
+chromadb>=0.5.0
+langchain-community>=0.3.0
+sentence-transformers>=3.0.0
+
+# Observability
+langsmith>=0.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0

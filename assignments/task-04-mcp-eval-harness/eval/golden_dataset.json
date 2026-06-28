@@ -1,0 +1,159 @@
+[
+  {
+    "id": "q01",
+    "question": "What does RLHF stand for and what are its three stages?",
+    "expected_facts": [
+      "Reinforcement Learning from Human Feedback",
+      "supervised fine-tuning",
+      "reward model training",
+      "PPO"
+    ],
+    "source_doc": "sample_ml.txt"
+  },
+  {
+    "id": "q02",
+    "question": "What is the difference between supervised learning and unsupervised learning?",
+    "expected_facts": [
+      "supervised learning uses labeled data",
+      "unsupervised learning finds hidden patterns without labels",
+      "input-output pairs"
+    ],
+    "source_doc": "sample_ml.txt"
+  },
+  {
+    "id": "q03",
+    "question": "What are the key components of a Transformer architecture?",
+    "expected_facts": [
+      "multi-head self-attention",
+      "position-wise feed-forward networks",
+      "layer normalization",
+      "positional encoding"
+    ],
+    "source_doc": "sample_ai.txt"
+  },
+  {
+    "id": "q04",
+    "question": "What is RAG and what are its main phases?",
+    "expected_facts": [
+      "Retrieval-Augmented Generation",
+      "indexing phase",
+      "retrieval phase",
+      "generation phase",
+      "vector database"
+    ],
+    "source_doc": "vector_databases.md"
+  },
+  {
+    "id": "q05",
+    "question": "What is HNSW and which vector databases use it?",
+    "expected_facts": [
+      "Hierarchical Navigable Small World",
+      "graph-based index",
+      "Chroma",
+      "Weaviate"
+    ],
+    "source_doc": "vector_databases.md"
+  },
+  {
+    "id": "q06",
+    "question": "What is the Send API in LangGraph and what is it used for?",
+    "expected_facts": [
+      "fan-out parallelism",
+      "dynamically dispatch multiple tasks",
+      "Send",
+      "parallel"
+    ],
+    "source_doc": "langgraph_send_api.md"
+  },
+  {
+    "id": "q07",
+    "question": "Explain chain-of-thought prompting and who introduced it.",
+    "expected_facts": [
+      "step-by-step reasoning",
+      "Wei et al.",
+      "2022",
+      "Chain-of-Thought Prompting Elicits Reasoning"
+    ],
+    "source_doc": "prompt_engineering.md"
+  },
+  {
+    "id": "q08",
+    "question": "What are the main overfitting prevention techniques in machine learning?",
+    "expected_facts": [
+      "cross-validation",
+      "L1 regularization",
+      "L2 regularization",
+      "dropout",
+      "early stopping"
+    ],
+    "source_doc": "sample_ml.txt"
+  },
+  {
+    "id": "q09",
+    "question": "What is Constitutional AI and which company developed it?",
+    "expected_facts": [
+      "Anthropic",
+      "helpful, harmless, and honest",
+      "critique and revise",
+      "constitution"
+    ],
+    "source_doc": "prompt_engineering.md"
+  },
+  {
+    "id": "q10",
+    "question": "What are the three main checkpointer options in LangGraph and what does each one do?",
+    "expected_facts": [
+      "MemorySaver",
+      "SqliteSaver",
+      "PostgresSaver",
+      "in-memory",
+      "SQLite"
+    ],
+    "source_doc": "langgraph_send_api.md"
+  },
+  {
+    "id": "q11",
+    "question": "What is few-shot prompting and how does it differ from zero-shot prompting?",
+    "expected_facts": [
+      "few-shot provides examples",
+      "zero-shot has no examples",
+      "guides the model's behavior"
+    ],
+    "source_doc": "prompt_engineering.md"
+  },
+  {
+    "id": "q12",
+    "question": "What are the benefits of using RAG over fine-tuning for injecting knowledge into LLMs?",
+    "expected_facts": [
+      "reduces hallucinations",
+      "private or proprietary knowledge",
+      "more cost-effective",
+      "up-to-date information"
+    ],
+    "source_doc": "vector_databases.md"
+  },
+  {
+    "id": "q13",
+    "question": "What is the ReAct pattern in LangGraph and what does the loop look like?",
+    "expected_facts": [
+      "Reasoning and Acting",
+      "select a tool",
+      "tool executes",
+      "loop until done",
+      "agent_node",
+      "tool_node"
+    ],
+    "source_doc": "langgraph_send_api.md"
+  },
+  {
+    "id": "q14",
+    "question": "What are the three AI safety concerns mentioned in the documents?",
+    "expected_facts": [
+      "alignment",
+      "robustness",
+      "interpretability",
+      "fairness"
+    ],
+    "source_doc": "sample_ai.txt"
+  }
+]
