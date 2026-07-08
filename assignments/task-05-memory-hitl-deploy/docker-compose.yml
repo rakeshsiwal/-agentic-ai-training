@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    container_name: task05-agent
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Override Chroma path to use mounted volume
+      - CHROMA_PERSIST_DIR=/app/data/chroma_db
+      # Disable HF Hub auth warnings in container
+      - TOKENIZERS_PARALLELISM=false
+      - HF_HUB_DISABLE_PROGRESS_BARS=1
+    volumes:
+      # Persist Chroma embeddings and SQLite checkpoints across restarts
+      - agent_data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 90s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  agent_data:
+    driver: local

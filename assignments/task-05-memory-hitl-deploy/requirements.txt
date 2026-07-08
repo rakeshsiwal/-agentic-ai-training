@@ -1,0 +1,38 @@
+# Core
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# LLM providers (at least one API key required)
+langchain-anthropic>=0.2.0
+langchain-openai>=0.2.0
+langchain-google-genai>=2.0.0
+langchain-groq>=0.2.0
+
+# MCP (reused from Task 04)
+mcp>=1.2.0
+langchain-mcp-adapters>=0.1.0
+mcp-server-time>=0.1.0
+
+# RAG (reused from Task 04)
+langchain-chroma>=0.1.0
+chromadb>=0.5.0
+langchain-community>=0.3.0
+langchain-huggingface>=0.1.0
+sentence-transformers>=3.0.0
+langchain-text-splitters>=0.2.0
+
+# Memory & Persistence
+langgraph-checkpoint-sqlite>=0.1.0
+
+# API
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+sse-starlette>=2.0.0
+
+# Observability
+langsmith>=0.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
