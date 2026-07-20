@@ -1,0 +1,138 @@
+[
+  {
+    "id": "q01",
+    "question": "What does RLHF stand for and what are its three stages?",
+    "expected_facts": ["Reinforcement Learning from Human Feedback", "supervised fine-tuning", "reward model training", "PPO"],
+    "source_doc": "sample_ml.txt",
+    "type": "standard"
+  },
+  {
+    "id": "q02",
+    "question": "What is the difference between supervised learning and unsupervised learning?",
+    "expected_facts": ["supervised learning uses labeled data", "unsupervised learning finds hidden patterns without labels", "input-output pairs"],
+    "source_doc": "sample_ml.txt",
+    "type": "standard"
+  },
+  {
+    "id": "q03",
+    "question": "What are the key components of a Transformer architecture?",
+    "expected_facts": ["multi-head self-attention", "position-wise feed-forward networks", "layer normalization", "positional encoding"],
+    "source_doc": "sample_ai.txt",
+    "type": "standard"
+  },
+  {
+    "id": "q04",
+    "question": "What is RAG and what are its main phases?",
+    "expected_facts": ["Retrieval-Augmented Generation", "indexing phase", "retrieval phase", "generation phase", "vector database"],
+    "source_doc": "vector_databases.md",
+    "type": "standard"
+  },
+  {
+    "id": "q05",
+    "question": "What is HNSW and which vector databases use it?",
+    "expected_facts": ["Hierarchical Navigable Small World", "graph-based index", "Chroma", "Weaviate"],
+    "source_doc": "vector_databases.md",
+    "type": "standard"
+  },
+  {
+    "id": "q06",
+    "question": "What is the Send API in LangGraph and what is it used for?",
+    "expected_facts": ["fan-out parallelism", "dynamically dispatch multiple tasks", "Send", "parallel"],
+    "source_doc": "langgraph_send_api.md",
+    "type": "standard"
+  },
+  {
+    "id": "q07",
+    "question": "Explain chain-of-thought prompting and who introduced it.",
+    "expected_facts": ["step-by-step reasoning", "Wei et al.", "2022", "Chain-of-Thought Prompting Elicits Reasoning"],
+    "source_doc": "prompt_engineering.md",
+    "type": "standard"
+  },
+  {
+    "id": "q08",
+    "question": "What are the main overfitting prevention techniques in machine learning?",
+    "expected_facts": ["cross-validation", "L1 regularization", "L2 regularization", "dropout", "early stopping"],
+    "source_doc": "sample_ml.txt",
+    "type": "standard"
+  },
+  {
+    "id": "q09",
+    "question": "What is Constitutional AI and which company developed it?",
+    "expected_facts": ["Anthropic", "helpful, harmless, and honest", "critique and revise", "constitution"],
+    "source_doc": "prompt_engineering.md",
+    "type": "standard"
+  },
+  {
+    "id": "q10",
+    "question": "What are the three main checkpointer options in LangGraph and what does each one do?",
+    "expected_facts": ["MemorySaver", "SqliteSaver", "PostgresSaver", "in-memory", "SQLite"],
+    "source_doc": "langgraph_send_api.md",
+    "type": "standard"
+  },
+  {
+    "id": "q11",
+    "question": "What is few-shot prompting and how does it differ from zero-shot prompting?",
+    "expected_facts": ["few-shot provides examples", "zero-shot has no examples", "guides the model's behavior"],
+    "source_doc": "prompt_engineering.md",
+    "type": "standard"
+  },
+  {
+    "id": "q12",
+    "question": "What are the benefits of using RAG over fine-tuning for injecting knowledge into LLMs?",
+    "expected_facts": ["reduces hallucinations", "private or proprietary knowledge", "more cost-effective", "up-to-date information"],
+    "source_doc": "vector_databases.md",
+    "type": "standard"
+  },
+  {
+    "id": "m01",
+    "question": "I always want answers in bullet points. Can you confirm?",
+    "expected_facts": ["bullet points", "understood", "preference"],
+    "source_doc": null,
+    "type": "memory_set",
+    "memory_key": "response_style",
+    "memory_value": "bullet points"
+  },
+  {
+    "id": "m02",
+    "question": "What is the ReAct pattern in LangGraph?",
+    "expected_facts": ["bullet", "Reasoning", "Acting", "tool", "loop"],
+    "source_doc": "langgraph_send_api.md",
+    "type": "memory_recall",
+    "depends_on": "m01",
+    "check_preference": "bullet points"
+  },
+  {
+    "id": "m03",
+    "question": "Please always cite the source document when you answer.",
+    "expected_facts": ["cite", "source", "understood"],
+    "source_doc": null,
+    "type": "memory_set",
+    "memory_key": "citation_style",
+    "memory_value": "always cite source"
+  },
+  {
+    "id": "m04",
+    "question": "What are the main AI safety concerns mentioned in the documents?",
+    "expected_facts": ["alignment", "robustness", "interpretability", "sample_ai"],
+    "source_doc": "sample_ai.txt",
+    "type": "memory_recall",
+    "depends_on": "m03",
+    "check_preference": "cite"
+  },
+  {
+    "id": "m05",
+    "question": "What did we discuss in our last session?",
+    "expected_facts": ["session", "discussed", "previous"],
+    "source_doc": null,
+    "type": "memory_episode",
+    "note": "Tests episodic memory recall — answer should reference past session content"
+  },
+  {
+    "id": "m06",
+    "question": "Based on what you know about my interests, what topic from our knowledge base would you recommend I explore next?",
+    "expected_facts": ["recommend", "interest", "based on"],
+    "source_doc": null,
+    "type": "memory_episode",
+    "note": "Tests personalised recommendation from episodic memory"
+  }
+]
