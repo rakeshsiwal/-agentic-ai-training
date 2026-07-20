@@ -1,4 +1,4 @@
-# Assignment Task 04 — MCP Tool Server, Interoperable Agent, and Evaluation Harness
+ Assignment Task 04 — MCP Tool Server, Interoperable Agent, and Evaluation Harness
 
 **Issued:** June 24, 2026
 **Due:** July 1, 2026
